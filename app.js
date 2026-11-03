@@ -40,6 +40,11 @@ app.post('/new', (req, res) => {
   res.redirect('/');
 });
 
+app.get('/message/:id', (req, res) => {
+  const message = messages[Number(req.params.id)];
+  res.render('message', { message });
+});
+
 const PORT = 3000;
 
 app.listen(PORT, () => {

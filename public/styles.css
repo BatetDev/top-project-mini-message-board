@@ -55,3 +55,13 @@ button {
 label {
   font-weight: 600;
 }
+
+.button {
+  display: inline-block;
+  background: #2a3550;
+  color: var(--text);
+  border-radius: 4px;
+  padding: 0.6rem 1rem;
+  text-decoration: none;
+  font-weight: 600;
+}

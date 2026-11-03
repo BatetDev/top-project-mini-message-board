@@ -16,12 +16,14 @@
   </head>
   <body>
     <h1>Mini Message Board</h1>
-    <% for (const message of messages) { %> 
+    <% messages.forEach((message, index) => { %> 
       <div>
         <p><strong><%= message.user %></strong></p>
         <p><%= message.text %></p>
         <p><%= message.added.toLocaleString('en-US', { year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' }) %></p>
+        <a href="/message/<%= index %>" class="button">View message</a>
       </div>
-    <% } %>
+      <% }) %>
+      <a href="/new" class="button">New Message</a>
   </body>
 </html>
