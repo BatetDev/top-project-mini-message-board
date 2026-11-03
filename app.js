@@ -25,7 +25,7 @@ app.use(express.static('public'));
 app.get('/', (req, res) => {
   res.render('index', { messages });
 });
-app.get('/new', (req, res) => res.render('new'));
+app.get('/form', (req, res) => res.render('form'));
 
 const PORT = 3000;
 app.listen(PORT, () => {
