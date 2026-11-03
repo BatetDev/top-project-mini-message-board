@@ -3,6 +3,7 @@
   --text: #e2e8f0;
   --surface: #131a2a;
   --border: #2a3550;
+  --accent: #7c9cf5;
 }
 
 body {
@@ -17,6 +18,15 @@ h1,
 h2,
 h3 {
   font-family: 'Space Grotesk', sans-serif;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 form {
