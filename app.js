@@ -1,3 +1,4 @@
+const path = require('node:path');
 const express = require('express');
 const app = express();
 
@@ -21,7 +22,7 @@ const messages = [
 
 app.set('view engine', 'ejs');
 
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => {
@@ -30,7 +31,12 @@ app.get('/', (req, res) => {
 app.get('/new', (req, res) => res.render('form'));
 
 app.post('/new', (req, res) => {
-  console.log(req.body);
+  const { username, message } = req.body;
+  messages.push({
+    text: message,
+    user: username,
+    added: new Date(),
+  });
   res.redirect('/');
 });
 
