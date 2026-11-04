@@ -3,7 +3,6 @@ const express = require('express');
 const app = express();
 
 const PORT = process.env.PORT || 3000;
-
 const messages = [
   {
     text: "Just finished setting up my first Express server from scratch and honestly the feeling when that 'Server running on port 3000' line finally appeared was better than it had any right to be. Took me three tries, mostly because I kept forgetting to restart the process after editing app.js, and once because a stale node process from an hour earlier was still holding the port. If you are new to this: Ctrl+C before you edit, and check for stray processes before you start rewriting working code.",
@@ -23,7 +22,6 @@ const messages = [
 ];
 
 app.set('view engine', 'ejs');
-
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true }));
 
