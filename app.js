@@ -2,6 +2,8 @@ const path = require('node:path');
 const express = require('express');
 const app = express();
 
+const PORT = process.env.PORT || 3000;
+
 const messages = [
   {
     text: '  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta similique earum, beatae commodi eveniet autem iusto vitae explicabo iste facere ea illo quaerat ipsum fuga dolor nisi quasi, ut ullam a aut. Sequi, repellendus deserunt mollitia eius nam laboriosam sunt tempora soluta cum esse numquam adipisci quam sapiente accusantium dolorem laudantium. Repudiandae culpa vero soluta aperiam placeat odio itaque facere quam est maxime optio excepturi natus voluptatibus blanditiis, delectus deserunt, aliquid libero labore assumenda. Magni, eligendi quae minima dolorum sapiente nam ab cupiditate earum repellat tenetur impedit obcaecati totam ea commodi laborum doloremque quod vel praesentium repudiandae velit. Fuga, quis.',
@@ -44,8 +46,6 @@ app.get('/message/:id', (req, res) => {
   const message = messages[Number(req.params.id)];
   res.render('message', { message });
 });
-
-const PORT = 3000;
 
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);

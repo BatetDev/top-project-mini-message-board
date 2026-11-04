@@ -12,6 +12,8 @@ body {
   font-family: 'JetBrains Mono', monospace;
   margin: 0;
   padding: 2rem;
+  max-width: 720px;
+  margin-inline: auto;
 }
 
 h1,
