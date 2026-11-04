@@ -6,18 +6,18 @@ const PORT = process.env.PORT || 3000;
 
 const messages = [
   {
-    text: '  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta similique earum, beatae commodi eveniet autem iusto vitae explicabo iste facere ea illo quaerat ipsum fuga dolor nisi quasi, ut ullam a aut. Sequi, repellendus deserunt mollitia eius nam laboriosam sunt tempora soluta cum esse numquam adipisci quam sapiente accusantium dolorem laudantium. Repudiandae culpa vero soluta aperiam placeat odio itaque facere quam est maxime optio excepturi natus voluptatibus blanditiis, delectus deserunt, aliquid libero labore assumenda. Magni, eligendi quae minima dolorum sapiente nam ab cupiditate earum repellat tenetur impedit obcaecati totam ea commodi laborum doloremque quod vel praesentium repudiandae velit. Fuga, quis.',
-    user: 'Amado',
+    text: "Just finished setting up my first Express server from scratch and honestly the feeling when that 'Server running on port 3000' line finally appeared was better than it had any right to be. Took me three tries, mostly because I kept forgetting to restart the process after editing app.js, and once because a stale node process from an hour earlier was still holding the port. If you are new to this: Ctrl+C before you edit, and check for stray processes before you start rewriting working code.",
+    user: 'AmadoDev',
     added: new Date(),
   },
   {
-    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati voluptates eius pariatur autem libero id numquam blanditiis quasi assumenda veritatis magnam, hic eveniet vel harum exercitationem sed quibusdam alias culpa quidem temporibus facilis, sequi quaerat sit explicabo! Minus ex optio deleniti quis sint libero mollitia animi facere itaque! Ad, tempora. Perferendis ullam voluptatibus, corporis exercitationem deleniti dignissimos doloremque sint, ut explicabo atque repudiandae, voluptate amet quos eveniet sunt animi quibusdam quo? Quas animi officiis laborum distinctio tempore ad aut dolor officia illo a similique nulla neque beatae sed, repudiandae magni.',
-    user: 'Charles',
+    text: 'Anyone else find routing weirdly satisfying? You define a path, attach a function, and suddenly a URL does something. I spent twenty minutes yesterday just adding fake routes to watch them respond in the browser, none of which do anything useful. My app is basically a very confident hello world with delusions of grandeur. The part that actually surprised me was how much of the work is just ordering — middleware runs top to bottom, routes match in the order you register them, and a catch-all at the bottom will happily swallow everything above it if you are not paying attention. Small thing, big consequences.',
+    user: 'CharlesDoe1995',
     added: new Date(),
   },
   {
-    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem molestiae blanditiis officia aliquid similique quo consequatur ducimus, eos iusto! Similique, numquam accusantium facilis dignissimos suscipit, adipisci optio non perspiciatis blanditiis consequatur totam quod! Unde soluta tempore deleniti enim reprehenderit vel impedit quisquam explicabo quis nulla iste eaque necessitatibus voluptatum, animi voluptatem officia repudiandae praesentium deserunt. Eius soluta nulla delectus blanditiis labore, autem doloribus cumque recusandae ad natus! Rem sequi atque fugit quo, deleniti modi maxime ipsam ut obcaecati vel ex dicta eligendi temporibus aliquid voluptatem nam? Commodi quod fugit vel maxime cum blanditiis obcaecati veritatis!',
-    user: 'Cosimus',
+    text: "Reminder to myself and anyone else new to this: read the error message before you start changing code. I spent half an hour rewriting a perfectly working route because the actual problem was a typo in a template filename. The stack trace told me exactly which file it could not find. I ignored it, assumed the route was broken, and made three unrelated changes before I went back and read the first line of the error. The lesson is not 'be smarter' — it is 'read the thing before you act on the thing'. Works for error messages, docs, and most of life honestly.",
+    user: 'CosimusVII',
     added: new Date(),
   },
 ];
