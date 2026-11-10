@@ -19,11 +19,11 @@
     <% messages.forEach((message, index) => { %> 
       <div class="message">
 <p class="message-meta">
-  <strong><%= message.user %></strong> wrote on <%= message.added.toLocaleString('en-US', { year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' }) %>
+  <strong><%= message.username %></strong> wrote on <%= message.added.toLocaleString('en-US', { year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' }) %>
 </p>
 <p class="message-text"><%= message.text %></p>
 <div class="message-actions">
-  <a href="/message/<%= index %>" class="button">View message</a>
+  <a href="/message/<%= message.id %>" class="button">View message</a>
 </div>
       </div>
       <% }) %>
