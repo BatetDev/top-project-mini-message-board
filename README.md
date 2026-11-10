@@ -12,7 +12,7 @@ A small message board built with Express and EJS. Post a message, read others, o
 
 ## 📖 About
 
-A message board where visitors post a message with their name and read what others have written. Built as part of The Odin Project's Node curriculum to practice Express routing, middleware, route parameters, and server-side templating.
+A message board where visitors post a message with their name and read what others have written. Built as part of The Odin Project's Node curriculum to practice Express routing, middleware, route parameters, server-side templating, and connecting an Express app to a PostgreSQL database.
 
 ## 🛠️ Built With
 
@@ -20,6 +20,8 @@ A message board where visitors post a message with their name and read what othe
 - [Express](https://expressjs.com/) for routing and middleware
 - [EJS](https://ejs.co/) for server-rendered templates
 - JavaScript (ES6+), CommonJS modules
+- [PostgreSQL](https://www.postgresql.org/) for persistent message storage
+- [pg](https://node-postgres.com/) for the Node ↔ Postgres connection
 
 ## 🚀 Getting Started
 
@@ -27,6 +29,9 @@ A message board where visitors post a message with their name and read what othe
 git clone https://github.com/BatetDev/top-project-mini-message-board.git
 cd top-project-mini-message-board
 npm install
+cp .env.sample .env
+# fill in DATABASE_URL and DATABASE_URL_POOLED from your Postgres host
+node --env-file=.env db/populatedb.js   # first run only: create table + seed
 npm start
 ```
 
@@ -34,7 +39,7 @@ Runs on http://localhost:3000. Use npm run dev to auto-restart on file changes.
 
 ## ⚠️ Data Persistence
 
-Messages live in an in-memory array — no database. Restarting the server resets the board to its three sample messages, and on Render's free tier posts are lost when the service sleeps.
+Messages are stored in a PostgreSQL database hosted on Neon. The app reads two environment variables: DATABASE_URL (direct connection, used by the seed script) and DATABASE_URL_POOLED (pooled connection, used by the running app). See .env.sample for the shape. Data survives restarts and free-tier sleeps.
 
 ## 📜 Credits
 
