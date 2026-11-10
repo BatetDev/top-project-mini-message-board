@@ -8,9 +8,9 @@ CREATE TABLE messages ( id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY, tex
 
 INSERT INTO messages (text, username) 
 VALUES
-  ('Test message 1.', 'AmadoDev'),
-  ('Test message 2.', 'CharlesDoe1995'),
-  ('Test message 3.', 'CosimusVII');
+  ('Just got my first Express route responding. Small thing, big moment.', 'AmadoDev'),
+  ('Spent 20 minutes chasing a bug that was a missing await. Read the stack trace, past me.', 'CharlesDoe1995'),
+  ('Deployed to Render, waited 40 seconds for the free tier to wake up, and it worked.', 'CosimusVII');
 `;
 
 async function main() {
